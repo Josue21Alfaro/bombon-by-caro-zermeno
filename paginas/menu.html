@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Menú de Bombón by Caro Zermeño: galletas clásicas, rellenas, gourmet y postres de vitrina.">
+  <title>Bombón by Caro Zermeño | Menú</title>
+  <link rel="icon" href="../assets/img/comun/logo-chef-caro.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:wght@400;500;600;700&family=Spicy+Rice&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <a class="visually-hidden-focusable skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+  <!-- ===================== ENCABEZADO GLOBAL ===================== -->
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+          <img src="../assets/img/comun/logo-chef-caro.png" alt="Logotipo de Bombón: ilustración de Caro con gorro de chef" width="54" height="54" class="brand-logo rounded-circle" data-fallback="Bombón">
+          <span class="brand-title-wrap">
+            <span class="brand-main">BOMBÓN</span>
+            <span class="brand-divider" aria-hidden="true">|</span>
+            <span class="brand-sub">by: Caro Zermeño</span>
+          </span>
+        </a>
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="menuPrincipal">
+          <ul class="navbar-nav align-items-lg-center gap-lg-2 mt-3 mt-lg-0">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="menu.html">Menú</a></li>
+            <li class="nav-item"><a class="nav-link" href="sucursales.html">Sucursales</a></li>
+            <li class="nav-item"><a class="nav-link" href="nuestra-historia.html">Nuestra Historia</a></li>
+            <li class="nav-item mt-2 mt-lg-0"><a class="btn btn-bombon-cta" href="pide-aqui.html"><i class="bi bi-bag-heart-fill" aria-hidden="true"></i> ¡Pide Aquí!</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===================== CONTENIDO PRINCIPAL ===================== -->
+  <main id="contenido-principal">
+    <!-- Encabezado de página + migas de pan -->
+    <section class="page-hero">
+      <div class="container">
+        <nav aria-label="Ruta de navegación">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Menú</li>
+          </ol>
+        </nav>
+        <h1>La Vitrina</h1>
+        <p class="text-script mb-1">Todo lo que sale de nuestro horno</p>
+        <p class="section-lead">Galletas de 150&nbsp;g horneadas cada mañana en lotes pequeños. Si ya no está en vitrina, es porque alguien llegó primero.</p>
+      </div>
+    </section>
+
+    <!-- GALLETA DEL MES -->
+    <section id="temporada" class="py-5" aria-labelledby="temporada-titulo">
+      <div class="container">
+        <div class="soft-card">
+          <div class="row g-4 align-items-center">
+            <div class="col-12 col-md-5">
+              <div class="photo-frame galleta-flotante">
+                <img src="../assets/img/inicio/destacado-galleta-del-mes-pumpkin-chai.png" alt="Galleta del mes Pumpkin Chai con Berry Nuts, decorada con chocolate blanco y nuez" data-fallback="Pumpkin Chai">
+              </div>
+            </div>
+            <div class="col-12 col-md-7">
+              <span class="tag tag-new">Solo este mes</span>
+              <h2 id="temporada-titulo" class="pill-heading mt-2">GALLETA DEL MES</h2>
+              <h3 class="h4 fw-bold mt-3">Pumpkin Chai con Berry Nuts</h3>
+              <p>Calabaza de temporada, especias chai, arándano y un crujiente de nuez bañado en chocolate blanco. Sabe a suéter calientito y tarde de lluvia.</p>
+              <p class="price mb-3">$75 <small class="fs-6">MXN</small></p>
+              <a href="pide-aqui.html" class="btn btn-bombon-primary px-4">LA QUIERO EN MI CAJA</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VITRINA COMPLETA -->
+    <section class="pb-5" aria-labelledby="vitrina-titulo">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2 id="vitrina-titulo" class="pill-heading">ELIGE TU ANTOJO</h2>
+        </div>
+
+        <!-- Filtros (controlados en js/app.js) -->
+        <div class="menu-filters mb-4" role="group" aria-label="Filtrar productos por categoría">
+          <button type="button" class="btn btn-bombon-outline active" data-filtro="todas" aria-pressed="true">Todas</button>
+          <button type="button" class="btn btn-bombon-outline" data-filtro="clasicas" aria-pressed="false">Clásicas</button>
+          <button type="button" class="btn btn-bombon-outline" data-filtro="rellenas" aria-pressed="false">Rellenas y golosas</button>
+          <button type="button" class="btn btn-bombon-outline" data-filtro="gourmet" aria-pressed="false">Gourmet</button>
+          <button type="button" class="btn btn-bombon-outline" data-filtro="postres" aria-pressed="false">Postres de vitrina</button>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="clasicas">
+            <article class="menu-item">
+              <img src="../assets/img/menu/galleta-chocolate-chip.png" alt="Galleta clásica de mantequilla con chispas de chocolate" loading="lazy" data-fallback="Chispas de Siempre">
+              <div class="menu-item-body">
+                <div><span class="tag">Clásica</span></div>
+                <h3>Chispas de Siempre</h3>
+                <p>La de toda la vida, pero gordita y con el centro suavecito.</p>
+                <span class="price">$55 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="clasicas">
+            <article class="menu-item">
+              <img src="../assets/img/menu/galleta-nuez.png" alt="Galleta de mantequilla con trozos de nuez tostada" loading="lazy" data-fallback="Nuez Encantada">
+              <div class="menu-item-body">
+                <div><span class="tag">Clásica</span></div>
+                <h3>Nuez Encantada</h3>
+                <p>Nuez tostada en casa y un toque de vainilla de Papantla.</p>
+                <span class="price">$60 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="clasicas">
+            <article class="menu-item">
+              <img src="../assets/img/menu/galleta-almendras.png" alt="Galleta con almendras tostadas" loading="lazy" data-fallback="Almendra Tostadita">
+              <div class="menu-item-body">
+                <div><span class="tag">Clásica</span></div>
+                <h3>Almendra Tostadita</h3>
+                <p>Crujiente por fuera, con almendra tostada en cada mordida.</p>
+                <span class="price">$60 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="clasicas">
+            <article class="menu-item">
+              <img src="../assets/img/menu/galleta-avena-coco-caramelo.png" alt="Galleta de avena con coco y caramelo" loading="lazy" data-fallback="Avena, Coco &amp; Caramelo">
+              <div class="menu-item-body">
+                <div><span class="tag">Clásica</span></div>
+                <h3>Avena, Coco &amp; Caramelo</h3>
+                <p>Como la galleta de la abuela, con hilos de caramelo salado.</p>
+                <span class="price">$60 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="clasicas">
+            <article class="menu-item">
+              <img src="../assets/img/menu/galleta-macadamia.png" alt="Galleta con nuez de macadamia y chocolate blanco" loading="lazy" data-fallback="Macadamia Blanca">
+              <div class="menu-item-body">
+                <div><span class="tag">Clásica</span></div>
+                <h3>Macadamia Blanca</h3>
+                <p>Macadamia y chocolate blanco: la pareja más elegante.</p>
+                <span class="price">$65 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="rellenas">
+            <article class="menu-item">
+              <img src="../assets/img/menu/galleta-volcan-chocolate.png" alt="Galleta Volcán de chocolate con centro fundido" loading="lazy" data-fallback="Volcán de Chocolate">
+              <div class="menu-item-body">
+                <div><span class="tag tag-hot me-1">Más pedida</span><span class="tag">Rellena</span></div>
+                <h3>Volcán de Chocolate</h3>
+                <p>Doble chocolate con un corazón que hace erupción.</p>
+                <span class="price">$70 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="rellenas">
+            <article class="menu-item">
+              <img src="../assets/img/menu/galleta-nutella.png" alt="Galleta rellena de crema de avellana" loading="lazy" data-fallback="Abrazo de Nutella">
+              <div class="menu-item-body">
+                <div><span class="tag">Rellena</span></div>
+                <h3>Abrazo de Nutella</h3>
+                <p>Rellena de crema de avellana; el abrazo que necesitabas.</p>
+                <span class="price">$70 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="rellenas">
+            <article class="menu-item">
+              <img src="../assets/img/menu/galleta-kinder.png" alt="Galleta con trozos de chocolate Kinder" loading="lazy" data-fallback="Kinder Sorpresa">
+              <div class="menu-item-body">
+                <div><span class="tag">Rellena</span></div>
+                <h3>Kinder Sorpresa</h3>
+                <p>Con crema de leche y cuadritos de chocolate Kinder.</p>
+                <span class="price">$70 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="rellenas">
+            <article class="menu-item">
+              <img src="../assets/img/menu/galleta-oreo.png" alt="Galleta con trozos de galleta Oreo" loading="lazy" data-fallback="Cookies &amp; Cream">
+              <div class="menu-item-body">
+                <div><span class="tag">Rellena</span></div>
+                <h3>Cookies &amp; Cream</h3>
+                <p>Trozos de Oreo y betún de queso crema en la cima.</p>
+                <span class="price">$65 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="rellenas">
+            <article class="menu-item">
+              <img src="../assets/img/menu/galleta-golden-oreo.png" alt="Galleta con trozos de galleta Golden Oreo" loading="lazy" data-fallback="Golden Cookies &amp; Cream">
+              <div class="menu-item-body">
+                <div><span class="tag">Rellena</span></div>
+                <h3>Golden Cookies &amp; Cream</h3>
+                <p>La versión vainilla y dorada de nuestra consentida.</p>
+                <span class="price">$65 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="rellenas">
+            <article class="menu-item">
+              <img src="../assets/img/menu/galleta-crema-cacahuate.png" alt="Galleta con crema de cacahuate y chocolate" loading="lazy" data-fallback="Cacahuate Crujiente">
+              <div class="menu-item-body">
+                <div><span class="tag">Rellena</span></div>
+                <h3>Cacahuate Crujiente</h3>
+                <p>Crema de cacahuate y chocolate de leche, estilo Reese's.</p>
+                <span class="price">$70 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="rellenas">
+            <article class="menu-item">
+              <img src="../assets/img/menu/galleta-snickers-cajeta.png" alt="Galleta con chocolate, cacahuate y cajeta" loading="lazy" data-fallback="Snick-Cajeta">
+              <div class="menu-item-body">
+                <div><span class="tag">Rellena</span></div>
+                <h3>Snick-Cajeta</h3>
+                <p>Chocolate, cacahuate y cajeta de Celaya. Muy mexicana.</p>
+                <span class="price">$70 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="rellenas">
+            <article class="menu-item">
+              <img src="../assets/img/menu/galleta-tortuga.png" alt="Galleta tortuga con caramelo, nuez y chocolate" loading="lazy" data-fallback="Tortuga">
+              <div class="menu-item-body">
+                <div><span class="tag">Rellena</span></div>
+                <h3>Tortuga</h3>
+                <p>Caramelo, nuez pecana y chocolate. Lenta de olvidar.</p>
+                <span class="price">$70 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="rellenas">
+            <article class="menu-item">
+              <img src="../assets/img/menu/galleta-smores.png" alt="Galleta s'mores con malvavisco y chocolate" loading="lazy" data-fallback="S'mores de Fogata">
+              <div class="menu-item-body">
+                <div><span class="tag">Rellena</span></div>
+                <h3>S'mores de Fogata</h3>
+                <p>Malvavisco tostado y chocolate, sin necesidad de campamento.</p>
+                <span class="price">$70 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="gourmet">
+            <article class="menu-item">
+              <img src="../assets/img/menu/galleta-carajillo.png" alt="Galleta carajillo con betún de café y cocoa espolvoreada" loading="lazy" data-fallback="Carajillo">
+              <div class="menu-item-body">
+                <div><span class="tag tag-new me-1">Nuevo</span><span class="tag">Gourmet</span></div>
+                <h3>Carajillo</h3>
+                <p>Betún de café espresso y cocoa. Para la sobremesa.</p>
+                <span class="price">$75 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="gourmet">
+            <article class="menu-item">
+              <img src="../assets/img/menu/galleta-red-velvet.png" alt="Galleta red velvet" loading="lazy" data-fallback="Red Velvet">
+              <div class="menu-item-body">
+                <div><span class="tag">Gourmet</span></div>
+                <h3>Red Velvet</h3>
+                <p>Terciopelo rojo con chispas de chocolate blanco.</p>
+                <span class="price">$70 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="gourmet">
+            <article class="menu-item">
+              <img src="../assets/img/menu/galleta-pistache.png" alt="Galleta de pistache" loading="lazy" data-fallback="Pistache Real">
+              <div class="menu-item-body">
+                <div><span class="tag">Gourmet</span></div>
+                <h3>Pistache Real</h3>
+                <p>Masa de pistache con trozos enteros. Verde de envidia.</p>
+                <span class="price">$75 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="gourmet">
+            <article class="menu-item">
+              <img src="../assets/img/menu/galleta-pistache-frambuesa.png" alt="Galleta con pistaches y frambuesas enteras" loading="lazy" data-fallback="Pistache &amp; Frambuesa">
+              <div class="menu-item-body">
+                <div><span class="tag tag-new me-1">Nuevo</span><span class="tag">Gourmet</span></div>
+                <h3>Pistache &amp; Frambuesa</h3>
+                <p>Pistache tostado y frambuesas que explotan en cada mordida.</p>
+                <span class="price">$75 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="gourmet">
+            <article class="menu-item">
+              <img src="../assets/img/menu/galleta-matcha-nutella.png" alt="Galleta de té matcha con crema de avellana" loading="lazy" data-fallback="Matcha Nutella">
+              <div class="menu-item-body">
+                <div><span class="tag">Gourmet</span></div>
+                <h3>Matcha Nutella</h3>
+                <p>Té matcha japonés con un centro de crema de avellana.</p>
+                <span class="price">$75 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="gourmet">
+            <article class="menu-item">
+              <img src="../assets/img/menu/galleta-lotus.png" alt="Galleta con galleta Lotus y crema Biscoff" loading="lazy" data-fallback="Lotus Biscoff">
+              <div class="menu-item-body">
+                <div><span class="tag">Gourmet</span></div>
+                <h3>Lotus Biscoff</h3>
+                <p>Especiada y caramelizada, con crema Biscoff encima.</p>
+                <span class="price">$75 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="gourmet">
+            <article class="menu-item">
+              <img src="../assets/img/menu/galleta-limon.png" alt="Galleta de limón" loading="lazy" data-fallback="Rayito de Limón">
+              <div class="menu-item-body">
+                <div><span class="tag">Gourmet</span></div>
+                <h3>Rayito de Limón</h3>
+                <p>Ralladura de limón y glaseado ácido. Fresca como mañana de verano.</p>
+                <span class="price">$65 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="gourmet">
+            <article class="menu-item">
+              <img src="../assets/img/menu/galleta-cinnamon-roll.png" alt="Galleta estilo rol de canela" loading="lazy" data-fallback="Cinnamon Roll">
+              <div class="menu-item-body">
+                <div><span class="tag">Gourmet</span></div>
+                <h3>Cinnamon Roll</h3>
+                <p>Espiral de canela y glaseado de queso crema.</p>
+                <span class="price">$65 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="gourmet">
+            <article class="menu-item">
+              <img src="../assets/img/menu/galleta-pastel-zanahoria.png" alt="Galleta sabor pastel de zanahoria" loading="lazy" data-fallback="Pastel de Zanahoria">
+              <div class="menu-item-body">
+                <div><span class="tag">Gourmet</span></div>
+                <h3>Pastel de Zanahoria</h3>
+                <p>Zanahoria, nuez y especias con betún de queso crema.</p>
+                <span class="price">$65 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="postres">
+            <article class="menu-item">
+              <img src="../assets/img/menu/postre-tarta-sacher.png" alt="Postre de chocolate partido a la mitad con relleno de naranja confitada" loading="lazy" data-fallback="Sacher de Naranja">
+              <div class="menu-item-body">
+                <div><span class="tag">Postre de vitrina</span></div>
+                <h3>Sacher de Naranja</h3>
+                <p>Bizcocho de chocolate, naranja confitada y baño de chocolate oscuro.</p>
+                <span class="price">$85 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 menu-col" data-categoria="postres">
+            <article class="menu-item">
+              <img src="../assets/img/menu/postre-canastilla-cajeta.png" alt="Brownie con centro de cajeta fundida y chispas moradas" loading="lazy" data-fallback="Canastilla de Cajeta">
+              <div class="menu-item-body">
+                <div><span class="tag tag-hot me-1">Favorito</span><span class="tag">Postre de vitrina</span></div>
+                <h3>Canastilla de Cajeta</h3>
+                <p>Brownie húmedo con un río de cajeta en el centro.</p>
+                <span class="price">$80 <small class="fs-6">MXN</small></span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <p class="text-center small mt-4 mb-0">Precios por pieza, solo de referencia (proyecto escolar). ¿Alergias? Pregunta en sucursal: usamos nueces, lácteos, huevo y trigo.</p>
+      </div>
+    </section>
+
+    <!-- Navegación entre subpáginas -->
+    <nav class="page-pager" aria-label="Páginas anterior y siguiente">
+      <div class="container d-flex justify-content-between gap-3">
+        <a href="../index.html"><small>← Anterior</small>Inicio</a>
+        <a href="sucursales.html" class="text-end"><small>Siguiente →</small>Sucursales</a>
+      </div>
+    </nav>
+  </main>
+
+  <!-- ===================== PIE DE PÁGINA GLOBAL ===================== -->
+  <footer class="site-footer py-4 mt-auto">
+    <div class="container text-center">
+      <nav class="footer-nav d-flex flex-wrap justify-content-center gap-3 mb-3" aria-label="Navegación del pie de página">
+        <a href="../index.html">Inicio</a>
+        <a href="menu.html">Menú</a>
+        <a href="sucursales.html">Sucursales</a>
+        <a href="nuestra-historia.html">Nuestra Historia</a>
+        <a href="pide-aqui.html">Pide Aquí</a>
+      </nav>
+      <p class="mb-1 fw-semibold">Bombón by Caro Zermeño &copy; <span id="anio-actual">2026</span></p>
+      <p class="mb-0 small">San Luis Potosí, S.L.P. • Hechas con amor todos los días • Proyecto escolar</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>
